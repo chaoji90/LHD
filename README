@@ -1,0 +1,7 @@
+For search all baselines: 
+cd search;./train_search_all.sh
+
+For evaluation on <dataset>:
+cd eval/<datasets>/;./train.sh <arch file dir> <file extension>
+
+example: ./train.sh arch/cifar10/pcdarts pcdarts_cifar10
