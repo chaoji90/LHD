@@ -144,11 +144,11 @@ def train(train_queue, valid_queue, model, p_optimizer, criterion, w_optimizer, 
     inputd = inputd.cuda()
     target = target.cuda(non_blocking=True)
 
-    input_search, target_search = next(iter(valid_queue))
-    input_search = input_search.cuda()
-    target_search = target_search.cuda(non_blocking=True)
-
     if epoch>=15:
+        input_search, target_search = next(iter(valid_queue))
+        input_search = input_search.cuda()
+        target_search = target_search.cuda(non_blocking=True)
+
         p_optimizer.zero_grad()
         logits = model(input_search)
         loss = criterion(logits, target_search)

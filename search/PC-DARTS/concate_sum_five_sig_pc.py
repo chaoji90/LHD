@@ -4,8 +4,8 @@ import torch.nn.functional as F
 from operations_five_dr import *
 #from operations_five import *
 from torch.autograd import Variable
-from genotypes_pc import PRIMITIVES
-from genotypes_pc import Genotype_op
+from genotypes import PRIMITIVES
+from genotypes import Genotype_op
 import numpy as np
 from scipy.stats import entropy
 
