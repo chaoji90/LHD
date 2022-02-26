@@ -9,7 +9,8 @@ def _concat(xs):
 
 def normalize(x, dim, min_v=1e-5):
     x = torch.clamp(x, min=min_v)
-    normed = x / x.sum(dim=dim, keepdim=True)
+    normed=x
+    #normed = x / x.sum(dim=dim, keepdim=True)
     return normed
 
 class Architect(object):
