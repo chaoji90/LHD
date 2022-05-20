@@ -1,5 +1,4 @@
-All the used datasets are canonical benchmark datasets in vision recognition and will automatically downloaded
-by torch version so that the benchmark can be used nearly out of box.
+All the used datasets are canonical benchmark datasets in vision recognition and will automatically downloaded by torch version so that the benchmark can be used nearly out of box.
 
 
 For search all baselines: 
