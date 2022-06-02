@@ -1,15 +1,20 @@
 All the used datasets are canonical benchmark datasets in vision recognition and will automatically downloaded by torch version so that the benchmark can be used nearly out of box.
 
 
+
 For search all baselines: 
 cd search;./train_search_all.sh
-The search phase will iterate through all the algorithms in the benchmark and search on each algorithm based on 3 datasets.
+The search phase will iterate through all the algorithms in the benchmark and search on each algorithm based on 3 datasets (CIFAR-10, CIFAR-100, SVHN).
 Each dataset being trialed 5 times independently with diffrent seeds for each algorithm.
 The network architecture files, ending with "pl", obtained during the search phase will be placed in the algorithm source code directory.
 For example
 "20211010-140512-concate-sum-darts-bilevel-cifar10.pl" is the architecture file obtained by DARTS on CIFAR-10
 
+
+
 For evaluation on <dataset>:
-cd eval/<datasets>/;./train.sh <arch file dir> <file extension>
+cd eval/<datasets>/;./train.sh <arch file dir> <log file header>
 
 example: ./train.sh arch/cifar10/pcdarts pcdarts_cifar10
+Evaluate all structure files in the 'arch/cifar10/pcdarts' file in order based on the order Base, 1M, 3ops, 4out
+'pcdarts_cifar10' is used to name the evaluation log. The evaluation logs of Base, 1M, 3ops, and 4out will be recorded separately in pcdarts_cifar10_ori.log, pcdarts_cifar10_1M.log, pcdarts_cifar10_3op.log, pcdarts_cifar10_4out.log.
