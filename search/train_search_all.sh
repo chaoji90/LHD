@@ -6,30 +6,53 @@ pushd GDAS
 ./train_search.sh train_search_gdas.py cifar10 &> gdas_cifar10.log
 popd
 
-pushd drnas
-./train_search.sh train_search_concate_sum_five_dr.py cifar100 &> drnas_cifar100.log
-./train_search.sh train_search_concate_sum_five_dr.py svhn &> drnas_svhn.log
-./train_search.sh train_search_concate_sum_five_dr.py cifar10 &> drnas_cifar10.log
+pushd DrNAS
+./train_search.sh train_search_drnas.py cifar100 &> drnas_cifar100.log
+./train_search.sh train_search_drnas.py svhn &> drnas_svhn.log
+./train_search.sh train_search_drnas.py cifar10 &> drnas_cifar10.log
 popd 
 
-pushd random
-./train_search.sh train_search_concate_sum_five_rd.py cifar100 &> random_cifar100.log
-./train_search.sh train_search_concate_sum_five_rd.py svhn &> random_svhn.log
-./train_search.sh train_search_concate_sum_five_rd.py cifar10 &> random_cifar10.log
+pushd Random
+./train_search.sh train_search_rd.py cifar100 &> random_cifar100.log
+./train_search.sh train_search_rd.py svhn &> random_svhn.log
+./train_search.sh train_search_rd.py cifar10 &> random_cifar10.log
 popd 
 
-#pushd gaea
-#./train_search.sh train_search_concate_sum_five_gaea.py svhn &> gaea_silevel_svhn.log
-#./train_search.sh train_search_concate_sum_five_gaea_bilevel.py svhn &> gaea_bilevel_svhn.log
-#popd
+pushd DARTS
+./train_search.sh train_search_darts.py cifar100 &> darts_cifar100.log
+./train_search.sh train_search_darts.py svhn &> darts_svhn.log
+./train_search.sh train_search_darts.py cifar10 &> darts_cifar10.log
+popd 
 
-#./train_search.sh train_search_concate_sum_five_mixlevel.py svhn &> darts_mixlevel_svhn.log
-#./train_search.sh train_search_concate_sum_five_v1.py svhn &> darts_bilevel_svhn.log
+pushd GAEA
+./train_search.sh train_search_gaea_erm.py cifar100 &> gaea_erm_cifar100.log
+./train_search.sh train_search_gaea_erm.py svhn &> gaea_erm_svhn.log
+./train_search.sh train_search_gaea_erm.py cifar10 &> gaea_erm_cifar10.log
+./train_search.sh train_search_gaea_bilevel.py cifar100 &> gaea_bilevel_cifar100.log
+./train_search.sh train_search_gaea_bilevel.py svhn &> gaea_bilevel_svhn.log
+./train_search.sh train_search_gaea_bilevel.py cifar10 &> gaea_bilevel_cifar10.log
+popd 
 
-#pushd sp-darts
-#./train_search.sh train_search_concate_sum_five_sp.py svhn &> spdarts_svhn.log
-#popd
+pushd DARTS-
+./train_search.sh train_search_darts_minus.py cifar100 &> darts_minus_cifar100.log
+./train_search.sh train_search_darts_minus.py svhn &> darts_minus_svhn.log
+./train_search.sh train_search_darts_minus.py cifar10 &> darts_minus_cifar10.log
+popd 
 
-#pushd PC-DARTS
-#./train_search.sh train_search_concate_sum_five_pc.py svhn &> pcdarts_svhn.log
-#popd
+pushd PC-DARTS
+./train_search.sh train_search_pcdarts.py cifar100 &> pcdarts_cifar100.log
+./train_search.sh train_search_pcdarts.py svhn &> pcdarts_svhn.log
+./train_search.sh train_search_pcdarts.py cifar10 &> pcdarts_cifar10.log
+popd 
+
+pushd SP-DARTS
+./train_search.sh train_search_spdarts.py cifar100 &> spdarts_cifar100.log
+./train_search.sh train_search_spdarts.py svhn &> spdarts_svhn.log
+./train_search.sh train_search_spdarts.py cifar10 &> spdarts_cifar10.log
+popd 
+
+pushd MiLeNAS
+./train_search.sh train_search_milenas.py cifar100 &> milenas_cifar100.log
+./train_search.sh train_search_milenas.py svhn &> milenas_svhn.log
+./train_search.sh train_search_milenas.py cifar10 &> milenas_cifar10.log
+popd 
