@@ -1,3 +1,6 @@
+https://dl.acm.org/doi/10.5555/3618408.3620126
+https://arxiv.org/abs/2306.06852
+
 All the evaluation datasets are canonical benchmark datasets in vision recognition and will be automatically downloaded by torchvision so that the benchmark can be used almost out of box.
 
 
